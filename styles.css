@@ -52,9 +52,10 @@ nav ul li a:hover {
 /* About Page Styles */
 .about-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: flex-start; /* Align items to the start of the flex container */
     padding: 50px;
+    margin-right: 20px;
 }
 
 .about-text {
@@ -112,11 +113,42 @@ nav ul li a:hover {
 
 /* About Photo */
 .about-photo img {
-    max-width: 600px;
+    max-width: 100%;
     height: auto;
+    max-height: 500px; /* Cap the height at 800 pixels */
+    min-width: 400px;
     border-radius: 5px; /* Optional styling */
     margin-left: 50px;
 }
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column; /* Stack items vertically */
+        padding: 20px; /* Adjust padding for mobile */
+    }
+
+    .about-text {
+        max-width: 100%; /* Allow full width on smaller screens */
+        margin-bottom: 20px; /* Add some margin below text */
+    }
+
+    .about-photo img {
+        max-width: 100%; /* Ensure image is responsive */
+        margin-left: 0; /* Remove left margin */
+        margin-top: 20px; /* Add some space above the image */
+    }
+
+    /* Adjust text sizes for mobile */
+    .about-text h2 {
+        font-size: 28px; /* Reduce title size for mobile */
+    }
+
+    .about-text p {
+        font-size: 16px; /* Reduce paragraph size for mobile */
+    }
+}
+
 
 
 .masonry {
