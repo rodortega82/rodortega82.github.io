@@ -1,0 +1,184 @@
+/* Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Signika", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000; /* Background color */
+    color: #ffffff; /* Default text color (white) */
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    background-color: #000000;
+    color: #00ffcd; /* Header text color */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff; /* White links */
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #00ffcd; /* Change color on hover */
+}
+
+/* About Page Styles */
+.about-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Align items to the start of the flex container */
+    padding: 50px;
+}
+
+.about-text {
+    max-width: 600px;
+    color: #ffffff; /* Main text color */
+}
+
+.about-text h2 {
+    font-size: 32px;
+    color: #00ffcd; /* Title color */
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    color: #ffffff; /* Paragraph text color */
+}
+
+/* Additional CSS styles */
+.about-text .contact-details-title {
+    margin-top: 100px; /* Space above the contact details title */
+    color: #00ffcd; /* Desired color */
+    font-size: 24px; /* Adjust the font size if needed */
+    font-weight: bold; /* Make the text bold if desired */
+}
+
+.contact-details {
+    margin-top: 10px; /* Space above the contact details */
+}
+
+/* Social Links */
+.social-links a {
+    text-decoration: none; /* Remove underline */
+    color: #00ffcd; /* Match your website's color */
+    margin-top: 5px; /* Space between icons */
+    display: flex;
+    align-items: center; /* Center icons vertically */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+.social-links a:hover {
+    color: #fff; /* Change color on hover */
+}
+
+.social-links i {
+    margin-right: 10px; /* Space between icon and text */
+}
+
+.about-photo img {
+    max-width: 400px; /* Control the width of the photo area */
+    margin-left: 20px; /* Space between text and image */
+}
+
+/* About Photo */
+.about-photo img {
+    max-width: 600px;
+    height: auto;
+    border-radius: 5px; /* Optional styling */
+    margin-left: 50px;
+}
+
+
+.masonry {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr)); /* Adjust according to your needs */
+    grid-auto-rows: 1fr; /* Or set a minimum height */
+    grid-gap: 0; /* No gaps between images */
+}
+
+
+/* Add specific classes for spanning */
+.col--2x {
+    grid-row-end: span 2; /* Span 2 rows */
+}
+
+.col--3x {
+    grid-row-end: span 3; /* Span 3 rows */
+}
+
+.grid-item {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s; /* Smooth transition for the hover effect */
+}
+
+/* Image styles */
+.grid-item img,
+.grid-item video {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: grayscale(100%); /* Apply black and white filter */
+    transition: filter 0.3s ease; /* Smooth transition for filter */
+}
+
+/* Hover effect */
+.grid-item img:hover {
+    transform: scale(1.05); /* Slightly enlarges the image */
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+/* Reveal color on hover */
+.grid-item:hover img,
+.grid-item:hover video {
+    filter: grayscale(0%); /* Remove black and white filter */
+
+}
+
+/* Title styling */
+.grid-item .title {
+    position: absolute;
+    top: 10px; /* Position slightly above the bottom */
+    left: 10px; /* Add some padding from the left */
+    color: white;
+    font-size: 18px;
+    text-align: left;
+    opacity: 0; /* Hidden initially */
+    transition: opacity 0.3s ease; /* Smooth transition */
+    z-index: 10; /* Ensure the text is on top of the image */
+}
+
+/* Show title on hover */
+.grid-item:hover .title {
+    opacity: 1; /* Make the title visible */
+}
